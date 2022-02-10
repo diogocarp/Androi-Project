@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">IMC Calc App</string>
+    <string name="peso">Peso:</string>
+    <string name="altura">Altura:</string>
+    <string name="valida_peso">Informe a o peso</string>
+    <string name="valida_altura">Informe a altura</string>
+    <string name="calcular">Calcular</string>
+    <string name="limpar">Limpar</string>
+    <string name="imce">Seu imc é %1$f</string>
+    <string name="classificacao"></string>
+    <string name="magreza">Magreza</string>
+    <string name="normal">Normal</string>
+    <string name="sobrepeso">Sobrepeso</string>
+    <string name="obesidade">Obesidade</string>
+
+
+</resources>
