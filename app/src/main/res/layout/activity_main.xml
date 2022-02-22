@@ -23,6 +23,35 @@
         android:id="@+id/edit_altura"
         style="@style/edit_text"/>
 
+    <Spinner
+        android:entries="@array/array_genero"
+        android:id="@+id/spinner_genero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/group_genero"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+
+            android:id="@+id/radio_feminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feminino" />
+
+        <RadioButton
+            android:layout_marginLeft="30px"
+            android:id="@+id/radio_masculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masculino" />
+
+
+
+    </RadioGroup>
+
     <LinearLayout
         style="@style/estilo_base">
 

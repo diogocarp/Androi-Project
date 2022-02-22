@@ -12,6 +12,15 @@
     <string name="normal">Normal</string>
     <string name="sobrepeso">Sobrepeso</string>
     <string name="obesidade">Obesidade</string>
+    <string-array name="array_genero">
+
+        <item>Masculino</item>
+        <item>Feminino</item>
+
+    </string-array>
+
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Feminino</string>
 
 
 </resources>

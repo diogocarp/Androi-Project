@@ -2,10 +2,14 @@ package br.senai.sp.cotia.imccalcapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
     private EditText editPeso, editAltura;
     private Button btCalcular, btLimpar;
     private TextView classificacao, imce;
+    private RadioGroup groupGenero;
+    private Spinner spinnerGenero;
+    private String genero;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         btLimpar = findViewById(R.id.bt_limpar);
         classificacao = findViewById(R.id.classificacao);
         imce = findViewById(R.id.imce);
+        spinnerGenero = findViewById(R.id.spinner_genero);
+        groupGenero = findViewById(R.id.group_genero);
 
         imce.setText("");
 
@@ -76,6 +87,11 @@ public class MainActivity extends AppCompatActivity {
 
                 imce.setText(getString(R.string.imce,imc));
 
+                Intent intent = new Intent(this, ResultadoActivity.class);
+                intent.putExtra("imc",imc);
+                intent.putExtra("genero",genero);
+                startActivity(intent);
+
             }
 
             btLimpar.setOnClickListener(a ->{
@@ -92,7 +108,30 @@ public class MainActivity extends AppCompatActivity {
 
             });
 
+            //pegar o valor selecionado na Spinner
+
+            if(spinnerGenero.getSelectedItemPosition() == 0){
+
+                genero = "masculino";
+            }else{
+                genero = "feminino";
+
+            }
+
+            switch (groupGenero.getCheckedRadioButtonId()){
+                case  R.id.radio_feminino:
+                    genero = "feminino";
+                    break;
+                case R.id.radio_masculino:
+                    genero = "masculino";
+                    break;
+            }
+
+
+
         });
+
+
 
     }
 
